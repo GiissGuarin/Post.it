@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'consultar-posts';
+  postList = []
+
+
+  recibirPosts(posts) {
+    this.postList = posts
+
+
+  }
 }

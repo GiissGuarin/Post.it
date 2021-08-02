@@ -1,2 +1,2 @@
-<app-filtro></app-filtro>
-<app-post-list></app-post-list>
+<app-filtro (dataPosts)="recibirPosts($event)"></app-filtro>
+<app-post-list [postList]="postList"></app-post-list>

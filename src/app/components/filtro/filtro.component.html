@@ -12,9 +12,17 @@
                 </li>
 
             </ul>
-            <form [formGroup]="searchForm" (ngSubmit)="buscarPost()" class="d-flex input-group w-auto">
+            <form [formGroup]="searchForm" (ngSubmit)="enviarData()" class="d-flex input-group w-auto">
 
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                <select formControlName="filtrar_por" paceholder="" name="" id="">
+                    <option value="all" selected disabled>Filtrar por:</option>
+                    <option value="titulo">Título</option>
+                    <option value="autor">Autor</option>
+                    <option value="correo">Correo</option>
+                    <option value="palabras_clave">Palabra Clave</option>
+                </select>
+
+                <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
                     Filtrar por
                 </a>
@@ -22,7 +30,7 @@
                     <a class="dropdown-item" href="#">Autor</a>
                     <a class="dropdown-item" href="#">Correo</a>
                     <a class="dropdown-item" href="#">Palabra clave</a>
-                </div>
+                </div> -->
 
                 <input type="search" formControlName="palabra" class="form-control input-search"
                     placeholder="Escribe aquí" aria-label="Search" />
