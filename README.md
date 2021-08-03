@@ -11,7 +11,7 @@ Este proyecto fue realizado con:
 ## Como clonar
 
 Para clonar el proyecto:
-* Diríjase al [Repositorio] (https://github.com/GiissGuarin/Post.it) y sobre la lista de archivos, da clic en Código, o copie el siguiente link https://github.com/GiissGuarin/Post.it.git.
+* Diríjase al [Repositorio](https://github.com/GiissGuarin/Post.it) y sobre la lista de archivos, da clic en Código, o copie el siguiente link https://github.com/GiissGuarin/Post.it.git.
 * Ejecute la terminal en la ubicación en donde desee clonar el directorio.
 * En la terminal escriba `git clone` y ṕegue el enlace del repositorio.
 ```git clone https://github.com/GiissGuarin/Post.it.git```
