@@ -14,7 +14,7 @@ Para clonar el proyecto:
 * Diríjase al [Repositorio](https://github.com/GiissGuarin/Post.it) y sobre la lista de archivos, da clic en Código, o copie el siguiente link https://github.com/GiissGuarin/Post.it.git.
 * Ejecute la terminal en la ubicación en donde desee clonar el directorio.
 * En la terminal escriba `git clone` y ṕegue el enlace del repositorio.
-```git clone https://github.com/GiissGuarin/Post.it.git```
+```bash git clone https://github.com/GiissGuarin/Post.it.git```
 
 ## Instalación 
 Para instalar las librerias y recursos que requiere el proyecto para abrir, ejectute ``` npm install ``` 
