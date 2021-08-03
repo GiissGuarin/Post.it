@@ -56,3 +56,14 @@
     color: #f8f5ee;
     transition: 200ms;
 }
+.content-not-found {
+    margin: auto;
+}
+.content-not-found img {
+    width: 400px;
+    height: 400px;
+}
+.content-not-found p {
+    color: #7b7b74;
+    text-align: center;
+}

@@ -20,9 +20,10 @@
         </div>
 
     </div>
-    <div class="row">
-        <div class="col-12 m-3">
+    <div class="row" *ngIf="postList.length == 0">
+        <div class="col-6 content-not-found">
             <img src="../assets/img/not_found.jpg" alt="">
+            <p>No se ha encontrado ningun post</p>
         </div>
 
     </div>

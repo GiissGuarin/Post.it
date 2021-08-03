@@ -36,5 +36,8 @@ export class FiltroComponent implements OnInit {
     }
 
   }
+  refresh() {
+    window.location.reload();
+  }
 
 }

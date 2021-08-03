@@ -1,10 +1,14 @@
 .navbar {
     background-color: #9d9d93;
 }
+.navbar-collapse a {
+    cursor: pointer;
+}
 
 input:focus,
 select:focus,
 select,
+.btn:focus,
 input.form-control:focus {
     outline: none !important;
 
@@ -16,14 +20,24 @@ input.form-control:focus {
 
     -webkit-box-shadow: none;
 }
-select {
-    width: 20px !important;
-}
-.btn {
+
+.navbar-collapse .btn {
     color: #f8edd1;
     border-color: #f8edd1;
 }
-.btn:hover {
+.navbar-collapse .btn:hover {
     background-color: #f8edd1;
     color: #9d9d93;
+}
+.navbar-collapse .input-search {
+    width: auto;
+}
+.navbar-collapse .input-group {
+    width: 50%;
+    flex-wrap: nowrap;
+}
+@media (max-width: 767px) {
+    .navbar-collapse .input-group {
+        width: 1000%;
+    }
 }
