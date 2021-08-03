@@ -1,8 +1,8 @@
 <div class="container">
     <div class="row mb-2" *ngIf="postList.length > 0">
-        <div class="col-md-6" *ngFor="let post of postList">
-            <div class="card flex-md-row mb-4 box-shadow h-md-250">
-                <div class="card-body d-flex flex-column align-items-start">
+        <div class="col-md-6 col-sm-12 mb-4" *ngFor="let post of postList">
+            <div class="card flex-row mb-4 box-shadow ">
+                <div class="card-body flex-column col-8 align-items-start">
                     <div class="content-keywords">
                         <strong *ngFor="let pal of post.palabras_clave">#{{pal.trim()}}</strong>
                     </div>
@@ -11,18 +11,21 @@
                     </h3>
                     <div class="text-capitalize text-mute">{{post.autor}}</div>
                     <div class="mb-1 text-mute">{{post.correo}}</div>
-                    <p class="card-text mb-auto ">{{post.descripcion}}</p>
+                    <p class="card-text ">{{post.descripcion}}</p>
 
                 </div>
-                <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
-                    alt="Thumbnail [200x250]" [src]="post.img" data-holder-rendered="true">
+                <div class="col-4 ">
+                    <img class="card-img-right flex-auto d-md-block" data-src="holder.js/200x250?theme=thumb"
+                        alt="Thumbnail [200x250]" [src]="post.img" data-holder-rendered="true">
+                </div>
+
             </div>
         </div>
 
     </div>
     <div class="row" *ngIf="postList.length == 0">
-        <div class="col-6 content-not-found">
-            <img src="../assets/img/not_found.jpg" alt="">
+        <div class="col-4 content-not-found">
+            <img src="../assets/img/search-not-found.png" alt="">
             <p>No se ha encontrado ningun post</p>
         </div>
 

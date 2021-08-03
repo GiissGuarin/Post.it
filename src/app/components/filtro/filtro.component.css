@@ -1,8 +1,11 @@
 .navbar {
     background-color: #9d9d93;
 }
-.navbar-collapse a {
+.navbar a {
     cursor: pointer;
+}
+.collapse {
+    justify-content: center;
 }
 
 input:focus,

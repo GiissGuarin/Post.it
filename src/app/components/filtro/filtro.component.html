@@ -1,14 +1,13 @@
-<nav class="navbar navbar-expand navbar navbar-dark">
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-        <button class="navbar-toggler" type="button" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
+        <a class="navbar-brand" (click)="refresh()">Post-it</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="navbar-brand" (click)="refresh()">Post-it</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-            <form [formGroup]="searchForm" (ngSubmit)="enviarData()" class="m-auto input-group">
-
+            <form [formGroup]="searchForm" (ngSubmit)="enviarData()" class="d-flex text-center">
                 <select formControlName="filtrar_por" paceholder="Filtrar por:" class="form-control mx-2">
                     <option value="" disabled>Filtrar por:</option>
                     <option value="titulo">Título</option>
@@ -16,13 +15,9 @@
                     <option value="correo">Correo</option>
                     <option value="palabras_clave_like">Palabra Clave</option>
                 </select>
-
-                <input type="search" formControlName="palabra" class="form-control input-search"
-                    placeholder="Escribe aquí" aria-label="Search" />
-                <button class="btn btn-outline-light" type="submit" [disabled]="searchForm.invalid"
-                    data-mdb-ripple-color="dark">
-                    Buscar
-                </button>
+                <input class="form-control me-2" formControlName="palabra" type="search" placeholder="Escribe aquí"
+                    aria-label="Search">
+                <button class="btn btn-outline-success" type="submit" [disabled]="searchForm.invalid">Buscar</button>
             </form>
         </div>
     </div>
