@@ -1,18 +1,28 @@
 # ConsultarPosts
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
+Proyecto de busqueda de posts registrados, realizado como prueba técnica para el puesto de Desarrollador Front-end en Facture S.A.S 
 
-## Development server
+# Herramientas 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Este proyecto fue realizado con:
+* [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
+* [Bootstrap](https://github.com/twbs/bootstrap) version 5.0.2
 
-## Code scaffolding
+# Como clonar
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para clonar el proyecto:
+* Diríjase al [repositorio] (https://github.com/GiissGuarin/Post.it) y sobre la lista de archivos, da clic en Código, o copie el siguiente link https://github.com/GiissGuarin/Post.it.git.
+* Ejecute la terminal en la ubicación en donde desee clonar el directorio.
+* En la terminal escriba `git clone` y ṕegue el enlace del repositorio.
+```git clone https://github.com/GiissGuarin/Post.it.git```
 
-## Build
+## Instalación 
+Para instalar las librerias y recursos que requiere el proyecto para abrir, ejectute ``` npm install ``` 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# Preview
+
+[](/evidence/vista_previa.png)
+
 
 ## Running unit tests
 
