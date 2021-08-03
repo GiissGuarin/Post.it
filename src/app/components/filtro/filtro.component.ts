@@ -12,6 +12,8 @@ import { FiltroService } from 'src/app/services/filtro.service';
 export class FiltroComponent implements OnInit {
   searchForm: FormGroup;
   @Output() dataPosts = new EventEmitter<Array<object>>();
+  filtro_select = ""
+  filtro_palabra = ""
 
   constructor(private serv: FiltroService, private fb: FormBuilder) {
     this.searchForm = this.fb.group({
@@ -36,8 +38,15 @@ export class FiltroComponent implements OnInit {
     }
 
   }
-  refresh() {
-    window.location.reload();
+  async refresh() {
+    this.filtro_select = ""
+    this.filtro_palabra = ""
+    let posts: any = await this.serv.buscarPost({ filtrar_por: "", palabra: "" });
+    if (posts.status) {
+      this.dataPosts.emit(posts.data)
+    } else {
+      this.dataPosts.emit([])
+    }
   }
 
 }

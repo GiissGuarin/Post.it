@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-        <a class="navbar-brand" (click)="refresh()">Post-it</a>
+        <a class="navbar-brand home" (click)="refresh()">Post-it</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -8,15 +8,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
             <form [formGroup]="searchForm" (ngSubmit)="enviarData()" class="d-flex text-center">
-                <select formControlName="filtrar_por" paceholder="Filtrar por:" class="form-control mx-2">
+                <select formControlName="filtrar_por" [(ngModel)]="filtro_select" paceholder="Filtrar por:"
+                    class="form-control mx-2">
                     <option value="" disabled>Filtrar por:</option>
                     <option value="titulo">Título</option>
                     <option value="autor">Autor</option>
                     <option value="correo">Correo</option>
                     <option value="palabras_clave_like">Palabra Clave</option>
                 </select>
-                <input class="form-control me-2" formControlName="palabra" type="search" placeholder="Escribe aquí"
-                    aria-label="Search">
+                <input class="form-control me-2 input-search" [(ngModel)]="filtro_palabra" formControlName="palabra"
+                    type="search" placeholder="Escribe aquí" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit" [disabled]="searchForm.invalid">Buscar</button>
             </form>
         </div>

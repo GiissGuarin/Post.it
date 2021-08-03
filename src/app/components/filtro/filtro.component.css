@@ -7,6 +7,9 @@
 .collapse {
     justify-content: center;
 }
+.home {
+    color: #f8edd1;
+}
 
 input:focus,
 select:focus,
@@ -33,14 +36,9 @@ input.form-control:focus {
     color: #9d9d93;
 }
 .navbar-collapse .input-search {
-    width: auto;
+    color: #5f5f56;
 }
-.navbar-collapse .input-group {
-    width: 50%;
-    flex-wrap: nowrap;
-}
-@media (max-width: 767px) {
-    .navbar-collapse .input-group {
-        width: 1000%;
-    }
+select,
+select:focus {
+    color: #5f5f56;
 }
