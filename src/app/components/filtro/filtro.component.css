@@ -1,6 +1,29 @@
-.dropdown-toggle {
-    color: #ffffff;
+.navbar {
+    background-color: #9d9d93;
 }
-.input-search {
-    border-radius: 20px;
+
+input:focus,
+select:focus,
+select,
+input.form-control:focus {
+    outline: none !important;
+
+    outline-width: 0 !important;
+
+    box-shadow: none;
+
+    -moz-box-shadow: none;
+
+    -webkit-box-shadow: none;
+}
+select {
+    width: 20px !important;
+}
+.btn {
+    color: #f8edd1;
+    border-color: #f8edd1;
+}
+.btn:hover {
+    background-color: #f8edd1;
+    color: #9d9d93;
 }

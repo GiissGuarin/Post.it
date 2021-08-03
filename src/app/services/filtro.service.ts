@@ -12,8 +12,8 @@ export class FiltroService {
 
   buscarPost({ filtrar_por, palabra }) {
     return new Promise((resolve, reject) => {
-      let filtro = filtrar_por != "all" ? filtrar_por : ""
-      let texto = filtrar_por != "all" ? "=" + palabra.toLowerCase() : ""
+      let filtro = filtrar_por != "" ? filtrar_por : ""
+      let texto = filtrar_por != "" ? "=" + palabra.toLowerCase() : ""
       this.httpClient.get(`https://my-json-server.typicode.com/GiissGuarin/Post.it/posts?${filtro}${texto}`)
         .pipe(
           map(
@@ -26,10 +26,14 @@ export class FiltroService {
           )
         )
         .subscribe(result => {
-          console.log(result)
-          resolve({ status: true, data: result })
+          if (result.length > 0) {
+            resolve({ status: true, data: result })
+          } else {
+            resolve({ status: false, data: "" })
+          }
+
         }, err => {
-          reject({ status: false, data: "" })
+          resolve({ status: false, data: "" })
         })
     })
   }

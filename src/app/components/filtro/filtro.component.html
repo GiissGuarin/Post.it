@@ -1,36 +1,21 @@
-<nav class="navbar navbar-expand-lg navbar navbar-dark bg-secondary">
+<nav class="navbar navbar-expand navbar navbar-dark">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" aria-controls="navbarTogglerDemo01" aria-expanded="false"
             aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="navbar-brand" href="#">Post - it</a>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
+            <a class="navbar-brand" href="#">Post-it</a>
 
-            </ul>
             <form [formGroup]="searchForm" (ngSubmit)="enviarData()" class="d-flex input-group w-auto">
 
-                <select formControlName="filtrar_por" paceholder="" name="" id="">
-                    <option value="all" selected disabled>Filtrar por:</option>
+                <select formControlName="filtrar_por" paceholder="Filtrar por:" class="form-control mx-2">
+                    <option value="" disabled>Filtrar por:</option>
                     <option value="titulo">Título</option>
                     <option value="autor">Autor</option>
                     <option value="correo">Correo</option>
-                    <option value="palabras_clave">Palabra Clave</option>
+                    <option value="palabras_clave_like">Palabra Clave</option>
                 </select>
-
-                <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Filtrar por
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Autor</a>
-                    <a class="dropdown-item" href="#">Correo</a>
-                    <a class="dropdown-item" href="#">Palabra clave</a>
-                </div> -->
 
                 <input type="search" formControlName="palabra" class="form-control input-search"
                     placeholder="Escribe aquí" aria-label="Search" />

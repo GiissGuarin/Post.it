@@ -1,3 +1,58 @@
 .container {
     margin-top: 50px;
 }
+.content-keywords {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card {
+    background-color: #fff;
+    border: 1px solid #9d9d93;
+    border-radius: 15px;
+    height: 268px;
+}
+.card strong {
+    color: #9d9d93;
+}
+.card img {
+    border-radius: 0 15px 15px 0;
+    width: 200px;
+    height: 265px;
+}
+.card-body {
+    width: 50%;
+}
+.card-body h3 a {
+    color: #d88a8a;
+}
+.card-body strong {
+    margin: 0 5px;
+}
+.card-body p {
+    color: gray;
+    overflow: hidden;
+}
+.card-body .text-mute {
+    color: #9d9d93;
+}
+
+.card:hover {
+    background-color: #d88a8a85;
+    transition: 200ms;
+}
+.card:hover img {
+    opacity: 30%;
+    transition: 200ms;
+}
+.card:hover h3 a {
+    color: #7b7b74;
+    transition: 200ms;
+}
+.card:hover strong {
+    color: #f8f5ee;
+    transition: 200ms;
+}
+.card:hover .text-mute {
+    color: #f8f5ee;
+    transition: 200ms;
+}

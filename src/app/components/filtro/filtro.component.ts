@@ -30,6 +30,9 @@ export class FiltroComponent implements OnInit {
     let posts: any = await this.serv.buscarPost(this.searchForm.value);
     if (posts.status) {
       this.dataPosts.emit(posts.data)
+    } else {
+      this.dataPosts.emit([])
+      console.log("no hay nada")
     }
 
   }

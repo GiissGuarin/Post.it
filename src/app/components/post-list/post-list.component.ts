@@ -12,7 +12,6 @@ export class PostListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.postList)
   }
 
 }
