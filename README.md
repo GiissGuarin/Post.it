@@ -15,7 +15,6 @@ Para clonar el proyecto:
 * Ejecute la terminal en la ubicación en donde desee clonar el directorio.
 * En la terminal escriba `git clone` y ṕegue el enlace del repositorio.
 ```
-bash 
 git clone https://github.com/GiissGuarin/Post.it.git
 ```
 
@@ -24,8 +23,18 @@ Para instalar las librerias y recursos que requiere el proyecto para abrir, ejec
 
 ## Preview
 
+* Vista Web
+
 ![](/evidence/vista_previa.png)
 
+* Vista Responsive
+
+![](/evidence/vista_previa_resp.png)
+
+
+## API
+
+Fue utilizado [JSONPlaceholder](https://jsonplaceholder.typicode.com/) como simulador de API. Para la data se utilizó el siguente [JSON de prueba](https://my-json-server.typicode.com/GiissGuarin/Post.it/posts) el cual puede ser modificado editando el JSON local db.json ubicado en la raíz del proyecto y subiendolo al repositorio. 
 
 ## Running unit tests
 
