@@ -36,14 +36,24 @@ Para instalar las librerias y recursos que requiere el proyecto para abrir, ejec
 
 Fue utilizado [JSONPlaceholder](https://jsonplaceholder.typicode.com/) como simulador de API. Para la data se utilizó el siguente [JSON de prueba](https://my-json-server.typicode.com/GiissGuarin/Post.it/posts) el cual puede ser modificado editando el JSON local db.json ubicado en la raíz del proyecto y subiendolo al repositorio. 
 
-## Running unit tests
+## Componentes
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Para el desarrollo de la aplicación se desarrollaron dos componentes:
+* FiltroComponent,  el cual toma y valida la data que es enviada a la API.
+* Post-listComponent, el cual visualiza la data que responde a API
 
-## Running end-to-end tests
+## Servicio 
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Se creó el servicio FiltroService que hace el llamado a la API y recibe la data para visualizarla.
 
-## Further help
+## Ejecución de pruebas unitarias
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Ejecute `ng test` para ejecutar las pruebas unitarias a través de [Karma] (https://karma-runner.github.io).
+
+## Evidencia de test
+
+![](/evidence/prueba_console.png)
+
+![](/evidence/prueba_ventana.png)
+
+

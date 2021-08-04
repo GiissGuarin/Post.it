@@ -10,7 +10,7 @@ export class FiltroService {
 
   constructor(private httpClient: HttpClient) { }
 
-  buscarPost({ filtrar_por, palabra }) {
+  buscarPost({ filtrar_por, palabra }): Promise<{ status: boolean, data: Array<any> }> {
     return new Promise((resolve, reject) => {
       let filtro = filtrar_por != "" ? filtrar_por : ""
       let texto = filtrar_por != "" ? "=" + palabra.toLowerCase() : ""
@@ -29,11 +29,11 @@ export class FiltroService {
           if (result.length > 0) {
             resolve({ status: true, data: result })
           } else {
-            resolve({ status: false, data: "" })
+            resolve({ status: false, data: [] })
           }
 
         }, err => {
-          resolve({ status: false, data: "" })
+          resolve({ status: false, data: [] })
         })
     })
   }
